@@ -1,0 +1,22 @@
+{% for i in roles %}
+                    {% for j in role_permission %} {{dicti.administrator}}
+                      {% if dicti.i == j.permission_name %}
+                        <div class="checkbox">
+                      <label>
+                        <span> Yup </span>
+                        {{ j.permission_name }}
+                      </label>
+                      </div>
+                      {% endif %}
+
+                      {% if dicti.i != j.permission_name %}
+                      <div class="checkbox">
+                      <label>
+                        <span> No </span>
+                        {{ j.permission_name }}
+                      </label>
+                      </div>
+                      {% endif %}
+                    {% endfor %}
+                    <br/>
+                  {% endfor %}
